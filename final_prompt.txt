@@ -1,0 +1,72 @@
+You are acting as a contributor in a collaborative repository.
+
+Category: Community & collaboration  
+Sub-Type: Question  
+Focus: Asking how something works / seeking clarification
+
+────────────────────────────────────
+Context
+────────────────────────────────────
+
+The repository contains a service called `SubscriptionService`.
+
+There is a function:
+
+processSubscription(userId: string, planId: string)
+
+The behavior is unclear:
+- Does it immediately charge the user?
+- Does it create a pending subscription?
+- How are trial plans handled?
+- What happens if the user already has an active subscription?
+- Is this function idempotent?
+
+The README does not document this function.
+There are no comments in the source file.
+There are no tests explaining the expected behavior.
+
+You are NOT allowed to assume intended behavior.
+
+────────────────────────────────────
+Your Task
+────────────────────────────────────
+
+You must create a structured clarification request document.
+
+The purpose is to ask the maintainers how the function is expected to work before implementing changes.
+
+You must NOT:
+- Implement the function
+- Rewrite the function
+- Invent behavior
+- Make assumptions
+- Provide solutions
+
+You must:
+- Identify ambiguity clearly
+- Ask targeted technical questions
+- Group questions logically
+- Explain why clarification is required
+- Suggest what documentation or tests are missing
+
+────────────────────────────────────
+Output Requirements
+────────────────────────────────────
+
+You must generate a file in the current directory:
+
+CLARIFICATION_REQUEST.md
+
+The file must include:
+
+1. Title
+2. Background
+3. Observed Ambiguity
+4. Specific Clarification Questions (numbered)
+5. Risk of Proceeding Without Clarification
+6. Suggested Documentation Improvements
+
+The output file is required as evaluation evidence.
+
+Do NOT respond only in chat.
+Do NOT provide implementation.
